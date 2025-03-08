@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Анализ кода{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Анализ кода</h5>
+            </div>
+            <div class="card-body">
+                <form id="codeForm" method="POST">
+                    <div class="mb-3">
+                        <label for="code" class="form-label">Ваш код:</label>
+                        <textarea class="form-control" id="code" name="code" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Анализировать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Результаты анализа</h5>
+            </div>
+            <div class="card-body">
+                <div id="analysisResults">
+                    <div class="alert alert-info">
+                        Отправьте код для анализа
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
