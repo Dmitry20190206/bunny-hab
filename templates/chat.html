@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Чат{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Чат с ассистентом</h5>
+            </div>
+            <div class="card-body">
+                <div id="chatMessages" class="chat-messages mb-3" style="height: 400px; overflow-y: auto;">
+                    <div class="alert alert-info">
+                        Привет! Я ваш ассистент. Чем могу помочь?
+                    </div>
+                </div>
+                <form id="chatForm" class="d-flex">
+                    <input type="text" class="form-control me-2" id="messageInput" placeholder="Введите сообщение...">
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    <button type="button" class="btn btn-secondary ms-2" id="voiceButton">
+                        <i class="bi bi-mic"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
